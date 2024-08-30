@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import { urlencoded } from "express";
 import dotenv from "dotenv";
 import connectDB from "./util/db.js";
+import userRoute from "./routes/user.routes.js";
 
 dotenv.config({});
 
@@ -24,6 +25,10 @@ const cors0ptions={
     credentials:true
 }
 app.use(cors(cors0ptions));
+
+app.use("/api/v1/user",userRoute);
+"http://localhost:8000/api/v1/user/register"
+
 app.listen(PORT,()=>{
     connectDB();
     console.log(`Server listen at port ${PORT}`);
