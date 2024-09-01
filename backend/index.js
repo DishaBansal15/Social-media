@@ -5,7 +5,8 @@ import { urlencoded } from "express";
 import dotenv from "dotenv";
 import connectDB from "./util/db.js";
 import userRoute from "./routes/user.routes.js";
-
+import postRoute from "./routes/post.route.js";
+import messageRoute from "./routes/message.route.js";
 dotenv.config({});
 
 const app=express();
@@ -27,6 +28,8 @@ const cors0ptions={
 app.use(cors(cors0ptions));
 
 app.use("/api/v1/user",userRoute);
+app.use("/api/v1/user",postRoute);
+app.use("/api/v1/user",messageRoute);
 "http://localhost:8000/api/v1/user/register"
 
 app.listen(PORT,()=>{
