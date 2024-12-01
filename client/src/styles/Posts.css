@@ -1,0 +1,174 @@
+/* Style adjustments for better UI */
+.postsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.Post {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.Post:hover {
+    transform: scale(1.02);
+}
+
+.postTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.postTopDetails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.userpic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.usernameTop {
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#addFriendInPost {
+    color: #4CAF50;
+    font-size: 20px;
+}
+
+.postimg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.postReact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.supliconcol,
+.placeiconcol {
+    display: flex;
+    align-items: center;
+}
+
+.reactbtn {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.reactbtn:hover {
+    transform: scale(1.1);
+}
+
+.supportCount {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.placeicon {
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.place {
+    font-size: 14px;
+    color: #555;
+}
+
+.descdataWithBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.desc {
+    font-size: 16px;
+    color: #333;
+}
+
+.commentsContainer {
+    margin-top: 20px;
+}
+
+.makeComment {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.makeComment input {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.makeComment button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.makeComment button.disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.makeComment button:not(.disabled):hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.commentsBody {
+    margin-top: 10px;
+}
+
+.comments p {
+    font-size: 14px;
+    color: #555;
+}
+
+.comments p b {
+    font-weight: bold;
+}
+
+/* Like Button Animation */
+.liked {
+    color: red !important;
+    animation: likeAnimation 0.5s ease-in-out;
+}
+
+@keyframes likeAnimation {
+    0% {
+        transform: scale(1);
+        color: #ff0000;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        color: #ff0000;
+    }
+}

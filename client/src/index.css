@@ -1,0 +1,41 @@
+/* Fonts and Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #FFC0CB;
+  /* Light pink */
+  color: #333;
+  /* Neutral text color */
+}
+
+/* Bootstrap Overrides */
+:root {
+  --bs-primary: #FF69B4;
+  /* Deep pink for buttons */
+  --bs-secondary: #FFC0CB;
+  /* Light pink for secondary actions */
+}
+
+/* Utility Styles */
+a {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--bs-primary);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FF85C4;
+  /* Slightly lighter pink */
+}
